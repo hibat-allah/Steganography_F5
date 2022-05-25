@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/code.css">
+    <title>Coding Page</title>
+   
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <a class="nav-logo" href="index.html">
+            <img src="media/logo.svg" height="42" alt="Logo">
+            <li style="text-decoration:none;display: inline-block;">Secute It</li>
+        </a>
+        <ul class="navbar-items">
+            <li class="navbar-item"><a class="navbar-link" href="home.html">Home</a> </li>  
+            <li class="navbar-item"><a class="navbar-link" href="#Services" >Services</a> </li>  
+            <li class="navbar-item"><a class="navbar-link" href="home.html#Contact"> Contact</a> </li>  
+            <li style="text-decoration:none;display: inline-block;margin: 0 3rem 0 0;" ><button class="navbar-link button" href="singin.html">Sing In</button> </li>  
+        </ul>
+    </nav>
+   
+    </header>
+<section class="main">
+
+    <section class="welcome">
+        <h2>Here you can obtain your secret message from an image ! ^-^ </h2>
+        <h3 style="text-align:center; margin-top: 2%;">Instructions:</h3>
+        <p style="text-align:center; margin: 0;"> 
+            1. Choose the stego image that containt the secret message. And drop it in the left box. <br>
+            2. Drop the password in the input blox. <br>
+            3. You will obtain the secret message in the right box.
+        </p>
+    </section>
+
+    <section class="form-zone">
+        <form class="form">
+            <div class="box">
+
+                <label for="myfile">Select a stego image:</label>
+                <div class="drop-zone">
+                    <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                    <input type="file" name="myFile" class="drop-zone__input">
+                </div>
+            </div>
+            <div class="psw">
+                <label for="myfile">Write the password:</label>
+                <input type="text" name="pswd" >
+            </div>
+           
+                
+
+            <input type="submit" value="Submit" class="button submit">
+        </form>
+        <br>
+        <div class="box output">  
+            <label for="myfile">Here is your secret message:</label> 
+            <div class="drop-zone">
+                <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                <input type="file" name="myFile" class="drop-zone__input">
+            </div>
+        </div>
+    </section>
+    
+</section>
+
+    <footer class="footer Foot">
+        <a class="footer-logo navbar-link" href="index.html">
+            <img src="media/logo.svg" height="42" alt="Logo">
+            <li>Secute It</li>
+        </a>
+    </footer>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

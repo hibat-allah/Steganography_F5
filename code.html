@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/code.css">
+    <title>Coding Page</title>
+   
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <a class="nav-logo" href="index.html">
+            <img src="media/logo.svg" height="42" alt="Logo">
+            <li style="text-decoration:none;display: inline-block;">Secute It</li>
+        </a>
+        <ul class="navbar-items">
+            <li class="navbar-item"><a class="navbar-link" href="home.html">Home</a> </li>  
+            <li class="navbar-item"><a class="navbar-link" href="#Services" >Services</a> </li>  
+            <li class="navbar-item"><a class="navbar-link" href="home.html#Contact"> Contact</a> </li>  
+            <li style="text-decoration:none;display: inline-block;margin: 0 3rem 0 0;" ><button class="navbar-link button" href="singin.html">Sing In</button> </li>  
+        </ul>
+    </nav>
+   
+    </header>
+<section class="main">
+
+    <section class="welcome">
+        <h3 >How to hide a message:</h3>
+        <p> Pour cacher du texte dans une image, sélectionnez une image, entrez le texte, entrez le mot de passe, et cliquez sur encoder. Lorsque l'encodage est terminé, le texte a été caché dans l'image. Cliquez sur Enregistrer pour sauvegarder l'image. Maintenant, envoyez l'image au destinataire.
+        </p>
+    </section>
+
+    <section class="form-zone">
+        <form class="form">
+            <div class="box">
+
+                <label for="myfile">Select a cover image:</label>
+                <div class="drop-zone">
+                    <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                    <input type="file" name="imgsrc" class="drop-zone__input"required>
+                </div>
+            </div>
+            <div class="psw">
+                <label for="myfile">Write the password:</label>
+                <input type="text" name="pswd" placeholder="password..." required>
+            </div>
+            <div class="box">
+                
+                <label for="myfile">Select your secret message:</label> 
+                <div class="custom-file mb-3">
+                    <input type="file" class="custom-file-input" id="customFile" name="filename" required>
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                  </div>
+            </div>
+            
+
+            <input type="submit" value="Submit" class="button submit">
+        </form>
+        
+        <form style="position: absolute; top:40%;">
+            <div class="resultat output">
+                <label class="drop-zone__prompt"> Result image</label>
+                <a href="Stego\original.png" download> <img src="Stego\original.png" height="142" alt="Logo"></a>
+                <a href="Stego\original.png" download class="button">Download</a>
+            </div>
+        </form>
+    </section>
+    
+</section>
+
+    <footer class="footer ">
+        <a class="footer-logo navbar-link" href="index.html">
+            <img src="media/logo.svg" height="42" alt="Logo">
+            <li>Secute It</li>
+        </a>
+    </footer>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
