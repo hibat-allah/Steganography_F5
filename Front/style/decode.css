@@ -1,0 +1,33 @@
+.code .debtn3{
+    color:#E7C6FF ;
+     position: relative;
+      top:120px;
+      left:85px;
+  }
+  .code .debtn4{
+    color:#E7C6FF ;
+     position: relative;
+      top:28px;
+      left:400px;
+  }
+  .debtn{
+    background-color: #E7C6FF;
+    border-radius: 30px;
+    border: none;
+    border-color: #000000;
+    width: 118px;
+    height: 36px;
+    color: #000000;
+    padding: 1px 2px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    left:90px;
+    top: 150px;
+  }
+  .debtn:hover {
+    background: #e2bcfd;
+    color: #4e62d8;
+  }

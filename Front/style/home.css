@@ -1,0 +1,295 @@
+:root{ 
+    /* DECLARATION DES VARIABLES CSS POUR LES COULEURS */
+    --main-color: #B8C0FF;
+    --main-color-hover: #a1abf3;
+}
+* {
+    box-sizing: border-box;
+  }
+body{
+    background-color: #f7f5f5;
+    color:#000000;
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: 20px ;
+    margin: 0.5rem;
+    line-height: 29px;
+}
+h1, h2, h3, h4, h5, h6{
+    color:#B8C0FF; /* couleur du texte par défaut des titres*/
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration:none; /* supprimer le soulignement des liens */
+    transition: 100ms; /* animation de hover dans 100ms */
+    color: var(--main-color); /* couleur du theme par défaut des liens */
+} 
+a:hover{
+    color: var(--main-color-hover); /* couleur du theme (on hover) par défaut des liens */
+}
+ul { 
+    list-style-position: inside; /* Faire rentrer les points dans les list items */ 
+    text-decoration:none;
+    
+} 
+
+.header {
+    margin: 0;
+    top: 0;
+    width: 100%; /* header qui prend 100% du width du body (ou écran, car body margins = 0)*/
+    
+}
+.navbar{
+    position: absolute;
+    width: 100%;
+    height: 53px;
+    left: 0px;
+    margin-top: 33px;
+    border-bottom: 3px solid #E7C6FF ;
+}
+
+.nav-logo {
+    padding-left: 3rem;
+    display: inline-block; /* assurer logo et navbar-items peuvent être à la meme ligne */
+}
+.nav-logo img{
+    position: absolute;
+    top: -11px;
+}
+.nav-logo li{
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 100px;
+}
+.navbar-items {
+    float: right; /* flotter liste des liens a droite */
+    margin: 0; /* supprimer les marges en plus */
+}
+.navbar-item {
+    display: inline-block; /* afficher au meme ligne, mais garde height et width */
+    padding: 0.5rem 3rem; /* espacement */
+    margin: auto 3em; /* marges pour espacer l'un des autres */
+    transform: translate(-80%,0%);
+}
+.navbar-link {
+    text-decoration: none;
+    color: var(--main-color);
+}
+.navbar-link:hover {
+    color: var(--main-color-hover);
+}
+
+.Home{
+    position: absolute;
+    width: 1340px;
+    height: 828px;
+    margin-top: 80px;
+}
+.Home h2{
+    position: absolute;
+width: 674px;
+height: 462px;
+left: 386px;
+top: 76px;
+
+
+font-size: 129px;
+line-height: 155px;
+text-align: center;
+}
+.Home .chat{
+    position: absolute;
+    width: 123px;
+    height: 118px;
+    left: 148px;
+    top: 134px;
+}
+.Home .cryp{
+    position: absolute;
+width: 94px;
+height: 91px;
+left: 1124px;
+top: 390px;
+}
+.Home .loop{
+    position: absolute;
+width: 119px;
+height: 122px;
+left: 1207px;
+top: 159px;
+
+}
+.Home .hash{
+    position: absolute;
+width: 143px;
+height: 153px;
+left: 251px;
+top: 396px;
+}
+.Home .hide{
+    position: absolute;
+width: 92px;
+height: 73px;
+left: 660px;
+top: 602px;
+}
+.Services{
+    position: absolute;
+    width: 802px;
+    height: 300px;
+    left: 327px;
+    top: 823px;
+}
+.Services h3{
+    position: absolute;
+
+    left: 343px;
+    font-size: 24px;
+    text-align: center;
+}
+.Services p{
+    position: absolute;
+    width: 802px;
+    
+    top: 72px;
+    text-align: center;
+}
+.Services .button1{
+    position: absolute;
+    left: 240px;
+    top: 237px;
+    width: 254px;
+    height: 59px;
+    
+}
+.Services .button2{
+    position: absolute;
+    left: 240px;
+    top: 350px;
+    width: 254px;
+    height: 59px;
+    
+}
+.Services .line{
+    top: 44px;
+    left: 73px;
+}
+.line{
+    position: absolute;
+    width: 631px;
+    height: 0px;
+    left: 73px;
+    top: 35px;
+    border: 3px solid #E7C6FF;
+}
+
+.button1{
+    background: #E7C6FF;
+    border-radius: 30px;
+    border: none;
+    border-color: #000000;
+    width: 118px;
+    height: 36px;
+    color: #8c98f2;
+    padding: 1px 2px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button2{
+    background: #E7C6FF;
+    border-radius: 30px;
+    border: none;
+    border-color: #000000;
+    width: 118px;
+    height: 36px;
+    color: #8c98f2;
+    padding: 1px 2px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1:hover{
+    background: #e2bcfd;
+    color: #4e62d8;
+
+}
+.button2:hover{
+    background: #e2bcfd;
+    color: #4e62d8;
+
+}
+
+.About{
+    position: absolute;
+    width: 802px;
+    height: 300px;
+    left: 327px;
+    top: 1300px;
+    
+}
+.About h3{
+    position: absolute;
+
+    left: 343px;
+    font-size: 24px;
+}
+
+.About .P1{
+    position: absolute;
+    width: 802px;
+    
+    top: 80px;
+    text-align: center;
+}
+.About .P2{
+    position: absolute;
+    width: 802px;
+    
+    top: 150px;
+    text-align: center;
+}
+.About .line{
+    top: 45px;
+    left: 73px;
+}
+
+
+/* .About{
+    position: absolute;
+    width: 105px;
+    height: 23px;
+    left: 664px;
+    top: 1500px;
+    font-size: 24px;
+}
+.About .line{
+    top: 44px;
+    left: 73px;
+}
+
+.footer{
+    height: 15%;
+    background-color:    #FFD6FF;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 1771px;
+}
+.footer-logo img{
+    position: absolute;
+    top: 20px;
+    left: 49px;
+}
+.footer-logo li{
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+    left: 100px;
+} */

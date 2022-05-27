@@ -1,0 +1,129 @@
+.body{
+    font-size: 20px;
+  }
+  .about{
+      position: absolute;
+      left: 22%;
+      top: 18%;
+      width: 50%;
+      text-align:center; 
+  }
+  .about h3{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    
+  }
+  .about p{
+    margin: 0; 
+    width: 90%; 
+    position: absolute;
+    top: 150px;
+    left: 60px;
+  }
+  .about .line{
+    top: 60px;
+    left: 40px;
+    
+}
+  .code{
+      position: absolute;
+      left: 22%;
+      top: 70%;
+      width: 50%;
+  }
+  .code h3{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    text-align: center;
+    
+  }
+  .code .line{
+    top: 60px;
+    left: 40px;
+    text-align: center;
+    
+}
+.code .label1 {
+    background-color:#E7C6FF;
+    color: black;
+    padding: 0.3rem;
+    font-family: fantasy ,sans-serif;
+    font-size: medium;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    position: relative;
+    left: 80px;
+    top:100px;
+  }
+.code .label2 {
+    background-color:#E7C6FF;
+    color: black;
+    padding: 0.3rem;
+    font-family: fantasy ,sans-serif;
+    font-size: medium;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    position: relative;
+    left: 80px;
+    top: 150px;
+}
+
+.code .btn3{
+  color:#E7C6FF ;
+   position: relative;
+    top:170px;
+    left:90px;
+}
+.encoderbtn{
+    background: #E7C6FF;
+    border-radius: 30px;
+    border: none;
+    border-color: #000000;
+    width: 118px;
+    height: 36px;
+    color: #000000;
+    padding: 1px 2px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    top:200px;
+    left:90px;
+}
+.encoderbtn:hover{
+    background: #e2bcfd;
+    color: #4e62d8;
+
+}
+.encoderbtn1 {
+    background-color: #E7C6FF;
+    border-radius: 30px;
+    border: none;
+    border-color: #000000;
+    width: 118px;
+    height: 36px;
+    color: #000000;
+    padding: 1px 2px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    left:300px;
+    top:40px;
+  }
+  .encoderbtn1:hover {
+    background: #e2bcfd;
+    color: #4e62d8;
+  }
+
+  .navbar{
+      margin-top:19px;
+  }
+  
+  
+    
+    
