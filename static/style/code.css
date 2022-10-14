@@ -1,0 +1,18 @@
+.code {
+	width: 70%;
+	margin: auto;
+	margin-top: 5rem;
+}
+.code .contents {
+	display: flex;
+	flex-direction: column;
+}
+.code .button {
+	margin: 1rem auto 1rem 0;
+}
+.navbar {
+	margin-top: 19px;
+}
+.fileInp {
+	display: none;
+}

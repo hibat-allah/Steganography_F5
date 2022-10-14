@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include 'head.html' %}
+	<link
+		rel="stylesheet"
+		href="{{url_for('static', filename='style/code.css')}}"
+	/>
+	<body>
+		{% include 'nav.html' %}
+
+		<section class="About">
+			<h3>Comment cacher un message</h3>
+			<div class="line"></div>
+			<p>
+				Pour cacher du texte dans une image, sélectionnez une image,
+				entrez le texte, entrez le mot de passe, et cliquez sur encoder.
+				Lorsque l'encodage est terminé, le texte a été caché dans
+				l'image. Cliquez sur Enregistrer pour sauvegarder l'image.
+				Maintenant, envoyez l'image au destinataire.
+			</p>
+		</section>
+		<section class="code About" id="code">
+			<h3>Cacher un message</h3>
+			<div class="line"></div>
+			
+			<section class="d-flex">
+				<form
+					class="col-md-6 contents"
+					action="/encrypt"
+					method="POST"
+					enctype="multipart/form-data"
+					id="encryptForm"
+				>
+					<div style="display: flex;">
+						<p style="margin-right: 1rem;">Choisi un domaine:</p>
+						<div>
+							
+							<label>Spatial</label>
+							<input type="radio" id="spatial" name="domaine" value="Spatial">
+							
+							<label style="margin-left: 1rem;">Fréquentiel</label>
+							<input type="radio" id="frequentiel" name="domaine" value="Frequentiel">
+							
+						</div>
+					</div>
+					<div style="display: flex;">
+						<p style="margin-right: 1rem;">Choisi un algorithme:</p>
+						<div>
+						<label>JSTEG</label>
+						<input type="radio" id="jsteg" name="algos" value="JSTEG" onclick="hideMdp();">
+						<label style="margin-left:1rem">F5</label>
+						<input type="radio" id="f5" name="algos" value="F5" onclick="showMdp();">
+						</div>
+					</div>
+					<div class="button">
+						<label for="image" class="label1" id="a">
+							Uploader une image</label
+						>
+						<input
+							type="file"
+							name="image"
+							id="image"
+							class="fileInp"
+						/>
+					</div>
+					<div class="button">
+						<label for="message" class="label2" id="b">
+							Uploader un message</label
+						>
+						<input
+							type="file"
+							name="message"
+							id="message"
+							class="fileInp"
+						/>
+					</div>
+					<div class="mb-3" id="mdpDiv" style="display:none">
+						<label for="fname" class="form-label">Mot de passe</label>
+						<input
+							class="form-control"
+							type="text"
+							name="password"
+							id="fname"
+							name="fname"
+						/>
+					</div>
+					<button class="button">Encoder</button>
+				</form>
+				<div class="col-md-6 contents px-5">
+					<div>
+						<h3>Résultat:</h3>
+						<img id="output" style="width: 100%" />
+					</div>
+					<!-- <button class="encoderbtn1"><i class="fa fa-download"></i>Récupérer l’image</button> -->
+					<a id="download" class="button" href="" download="stegoy.png"
+						>download</a
+					>
+				</div>
+			</section>
+		</section>
+		<script>
+		function showMdp(){
+			document.getElementById('mdpDiv').style.display = 'block';
+		}
+		function hideMdp(){
+			document.getElementById('mdpDiv').style.display = 'none';
+		}
+
+			const encryptForm = document.getElementById(`encryptForm`);
+			const output = document.getElementById(`output`);
+			const download = document.getElementById(`download`);
+			const image = document.getElementById("image");
+        		image.addEventListener("change",function() {
+                 document.getElementById("a").innerHTML=image.value;
+        })
+			const message = document.getElementById("message");
+        		message.addEventListener("change",function() {
+                 document.getElementById("b").innerHTML=message.value;
+        })
+			encryptForm.addEventListener("submit", async (event) => {
+				// add a loading image while it's working
+				output.src = "/static/loading.gif";
+
+				event.preventDefault();
+
+				let formData = new FormData(encryptForm);
+				let response = await fetch("/encrypt", {
+					method: "post",
+					body: formData,
+				});
+				let result = await response.json();
+
+				// HANDLE REPLY
+				output.src = `data:image/jpeg;base64, ${result.output}`;
+				download.href = `data:image/jpeg;base64, ${result.output}`;
+			});
+		</script>
+	</body>
+</html>

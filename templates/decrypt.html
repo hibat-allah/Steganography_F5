@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'head.html' %}
+
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='style/code.css')}}"
+  />
+  <body>
+    {% include 'nav.html' %}
+
+    <section class="About">
+      <h3>Comment extraire un message</h3>
+      <div class="line"></div>
+      <p>
+        Pour extraire du texte d'une image, sélectionnez une image, entrez la
+        clé secrète et cliquez sur décoder. Une fois le décodage est terminé, le
+        texte qui était caché dans l'image apparaîtra dans la barre de message.
+      </p>
+    </section>
+    <section class="code About" id="code">
+      <h3>Extraire un message</h3>
+      <div class="line"></div>
+      <div class="content" style="padding: 7rem 0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="mb-4">
+                    <h3>Decoder</h3>
+                    <!-- <p class="mb-4">
+                      Lorem ipsum dolor sit amet elit. Sapiente sit aut eos
+                      consectetur adipisicing.
+                    </p> -->
+                  </div>
+
+                  <form
+                    action="/decrypt"
+                    method="POST"
+                    enctype="multipart/form-data"
+                    id="decryptForm"
+                  >   
+                    <div style="display: flex;">
+                      <p style="margin-right: 1rem;">Domaine:</p>
+                      <div>
+                        
+                        <label>Spatial</label>
+                        <input type="radio" id="spatial" name="domaine" value="Spatial">
+                        
+                        <label style="margin-left: 0.2rem;">Fréquentiel</label>
+                        <input type="radio" id="frequentiel" name="domaine" value="Frequentiel">
+                        
+                      </div>
+                    </div>
+                    <div style="display: flex;">
+                      <p style="margin-right: 1rem;">Algorithme:</p>
+                      <div>
+                      <label>JSTEG</label>
+                      <input type="radio" id="jsteg" name="algos" value="JSTEG" onclick="hideMdp();">
+                      <label style="margin-left:1rem">F5</label>
+                      <input type="radio" id="f5" name="algos" value="F5" onclick="showMdp();">
+                      </div>
+                    </div>
+                    <div class="button mb-3">
+                      <label for="image" class="label1" id="a">
+                        Uploader une image</label
+                      >
+                      <input
+                        type="file"
+                        name="image"
+                        id="image"
+                        class="fileInp"
+                      />
+                    </div>
+                    <div class="form-group last mb-4" id="mdpDiv" style="display:none">
+                      <label for="password">Mot de passe</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="password"
+                        id="password"
+                      />
+                    </div>
+                    <input type="submit" value="Decrypt" class="button" />
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 contents">
+              <h3>Résultat:</h3>
+              <div
+                id="output"
+                class="px-2 py-1"
+                style="border-style: ridge; border-radius: 5px; height: 400px"
+              >
+                ....
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function showMdp(){
+        document.getElementById('mdpDiv').style.display = 'block';
+      }
+      function hideMdp(){
+        document.getElementById('mdpDiv').style.display = 'none';
+      }
+      
+      const image = document.getElementById("image");
+        		image.addEventListener("change",function() {
+                 document.getElementById("a").innerHTML=image.value;
+        })
+      const decryptForm = document.getElementById(`decryptForm`);
+      decryptForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        let formData = new FormData(decryptForm);
+        let response = await fetch("/decrypt", {
+          method: "post",
+          body: formData,
+        });
+        let result = await response.json();
+
+        // HANDLE REPLY
+        document.getElementById("output").innerText = `${result.output}`;
+      });
+    </script>
+  </body>
+</html>

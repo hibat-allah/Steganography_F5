@@ -1,0 +1,142 @@
+:root {
+	/* DECLARATION DES VARIABLES CSS POUR LES COULEURS */
+	--main-color: #b8c0ff;
+	--main-color-hover: #a1abf3;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #fffcfc;
+	color: #000000;
+	font-family: "Inter";
+	font-style: italic;
+	font-size: 20px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	line-height: 29px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #b8c0ff; /* couleur du texte par défaut des titres*/
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none; /* supprimer le soulignement des liens */
+	transition: 100ms; /* animation de hover dans 100ms */
+	color: var(--main-color); /* couleur du theme par défaut des liens */
+}
+a:hover {
+	color: var(
+		--main-color-hover
+	); /* couleur du theme (on hover) par défaut des liens */
+}
+ul {
+	list-style-position: inside; /* Faire rentrer les points dans les list items */
+	text-decoration: none;
+}
+
+.Home {
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+.Home h2 {
+	width: 674px;
+	margin: 100px auto 20px auto;
+
+	font-size: 129px;
+	line-height: 155px;
+	text-align: center;
+}
+.Home img {
+	width: 100px;
+}
+.Services {
+	margin: 3rem auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+}
+.Services h3 {
+	font-size: 24px;
+	text-align: center;
+}
+.Services p {
+	top: 72px;
+	text-align: center;
+}
+.Services .button {
+	margin: 1rem auto;
+}
+.Services .line {
+	top: 44px;
+	left: 73px;
+}
+.line {
+	width: 100%;
+	margin-bottom: 2rem;
+	border: 3px solid #e7c6ff;
+}
+
+.button {
+	background: #e7c6ff;
+	border-radius: 30px;
+	border: none;
+	border-color: #000000;
+
+	color: #8c98f2;
+	padding: 1rem 2rem;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+.button:hover {
+	background: #e2bcfd;
+	color: #4e62d8;
+}
+
+.About {
+	width: 60%;
+	margin: auto;
+	margin-top: 5rem;
+}
+.About h3 {
+	font-size: 24px;
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 3%;
+}
+
+.About p {
+	text-align: center;
+}
+/*
+
+.footer{
+    height: 15%;
+    background-color:    #FFD6FF;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 1771px;
+}
+.footer-logo img{
+    position: absolute;
+    top: 20px;
+    left: 49px;
+}
+.footer-logo li{
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+    left: 100px;
+} */

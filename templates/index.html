@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include 'head.html' %}
+	<body>
+		{% include 'nav.html' %}
+
+		<section class="Home d-flex justify-content-center">
+			<div
+				class="d-flex flex-column left justify-content-center align-items-center"
+			>
+				<img src="static/media/chatting.svg" class="chat" />
+				<img src="static/media/crypthography.svg" class="cryp" />
+			</div>
+			<div
+				class="d-flex flex-column middle justify-content-center align-items-center"
+			>
+				<h2>Take it to the next level</h2>
+				<img src="static/media/hide.svg" class="hide" />
+			</div>
+			<div
+				class="d-flex flex-column right justify-content-center align-items-center"
+			>
+				<img src="static/media/hash.svg" class="hash" />
+
+				<img src="static/media/loop.svg" class="loop" />
+			</div>
+		</section>
+
+		<section class="Services" id="Services">
+			<h3>Services</h3>
+			<div class="line"></div>
+			<p>
+				La stéganographie est le procédé qui consiste à dissimuler des
+				informations dans d'autres sources d'information telles qu'un
+				texte, une image ou un fichier audio, de manière à ce qu'elles
+				ne soient pas visibles à l'œil humain. Dans notre site, on s'interesse a 
+				la stéganographie image.
+			</p>
+			<button class="button" onclick="window.location.href='/encrypt'">
+				Cacher un message
+			</button>
+			<button class="button" onclick="window.location.href='/decrypt'">
+				Extraire un message
+			</button>
+		</section>
+
+		<section class="About" id="about">
+			<h3>A propos</h3>
+			<div class="line"></div>
+			<p class="P1">
+				Dans ce site web, nous cachons le message dans notre image en
+				utilisant l'algorithme F5. Voici une brève explication de cet algorithme et
+				de son fonctionnement.
+			</p>
+			<p class="P2">
+				L’algorithme F5 est probablement la première implémentation
+				pratique d’une technique du codage matricielle  en stéganographie.
+				F5 insère le message pendant une compression JPEG, et utilise
+				les LSB des coefficients DCT pour réaliser l’opération de matrix
+				embedding. L’algorithme est sûr face aux attaques visuelles et
+				statistiques car il s’adapte à la distribution spécifiques des
+				coefficients DCT.
+			</p>
+		</section>
+	</body>
+</html>
