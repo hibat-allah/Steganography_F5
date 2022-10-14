@@ -4,7 +4,7 @@
 ### Front end:
 we used HTML,CSS,JavaScript
 ### Backend:
-we used Django-python
+we used Flask-python
 
 ## Steganography F5 algorithme:
 
@@ -12,26 +12,41 @@ we used Django-python
 Steganography is the art of hiding a secret message within (or even on top of) a non-secret object. This can be anything you want. Many forms of steganography nowadays include hiding a secret piece of text within a photograph. Alternatively, you may hide a secret message or script inside a Word or Excel document.
 In this work we will hide a .txt file inside an image.
 ### F5 Alogrithme
+Is one of steganography algorithms who use compression to hide the files. 
 
+### ----------------------------------------------------------------------------------------
 
+## What we are going to see in this project?
+In our project we implement two algorithme:
+1. F5 algorithme in spacial and frequentiel domaine ( using JPEG compression).
+2. JSTEG algorithme in spacial and frequentiel domaine ( using JPEG compression).
+
+To hide a txt file inside an image.
+
+### ----------------------------------------------------------------------------------------
 ## What do you need to install to use this project?
 
-### Django:
+### Flask:
 ```bash
->python -m venv <envname>
-```
-Lunix: 
-```bash 
-> source <envname>/bin/activate
+>py -m pip install flask
 ```
 
-Windows:  
+#### Create an environment?
+Linux :
 ```bash 
-> <envname>\Scripts\activate 
+> sudo apt-get install python3-venv    # If needed
+> python3 -m venv .venv
+> source .venv/bin/activate
 ```
-
-```bash
->pip install django
+MacOS :
+```bash 
+> python3 -m venv .venv
+> source .venv/bin/activate
+```
+Windows :
+```bash 
+> py -3 -m venv .venv
+> .venv\scripts\activate
 ```
 
 ### Opencv:
@@ -40,7 +55,4 @@ Windows:
 >pip  install opencv-python
 ```
 
-### Pil:
-```bash
->pip  install Pillow
-```
+### HTML/ CSS/ JavaScript
