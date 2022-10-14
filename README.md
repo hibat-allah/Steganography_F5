@@ -23,6 +23,8 @@ In our project we implement two algorithme:
 
 To hide a txt file inside an image.
 
+In our project the insertion of secret message in frequentiel domaine is incorrect ( the hidding phase is supposed to be after compression and we send it in huffman form, and for extracting phase it is supposed to be after decoding huffman).
+
 ### ----------------------------------------------------------------------------------------
 ## What do you need to install to use this project?
 
